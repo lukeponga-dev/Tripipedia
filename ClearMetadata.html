@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>How To Clear Metadata From Images</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+          
+          font-size: 16px;
+          color:#fff;
+          font-family: sans-serif;
+        }    
+      </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>How To Clear Metadata From Images</h1>
+        <p>Images that contain Exif metadata may reveal when and where a
+            photo was taken and with what device, among other things. While
+            this is usually a desirable feature, it can also be a privacy
+            concern if the images are going to be shared or published
+            online. Exif data also helps inflate file size. In this guide,
+            well see how to remove EXIF data from JPG, JPEG, PNG, and other
+            image files from the Linux command line. There are quite a few
+            tools available that can remove Exif data, but one weve found to
+            work very well is ExifTool. This program can strip Exif metadata
+            without re-compressing the image, so theres no loss in quality.
+            There are a variety of options that can be used with the
+            program, such as exporting a new version of the image (without
+            the Exif data) or simply re-saving the image in-place. Well show
+            you all the most useful commands below.</p>
+        <p>Downloading ExifTool</p>
+
+        <p>You can download this program from the ExifTool website or use
+            the appropriate command below to install it with your systems
+            package manager.</p>
+
+        <ul>
+            <li>Ubuntu, Debian, and Linux Mint, Whonix and Tails:</li>
+            <code>sudo apt install libimage-exiftool-perl</code>
+            <li>Fedora, AlmaLinux, CentOS, and RHEL:</li>
+            <code>sudo dnf install perl-Image-ExifTool</code>
+            <li>Arch Linux and Manjaro:</li>
+            <code>sudo pacman -S perl-image-exiftool</code>
+        </ul>
+
+        <p>ExifTool Command Examples</p>
+
+        <p>Once ExifTool has been installed, use some of the example
+            commands below in order to remove Exif data. These commands
+            assume that youve already changed directories to where your
+            images files are saved.</p>
+
+        <ol>
+            <li>View all the metadata for an image file by using the
+                following command.</li>
+            <code>exiftool image.jpg</code>
+            <li>Use the -all option to remove all metadata from a file. This
+                command will save a new copy of your file, with the metadata
+                removed. The original file will be renamed, with _original
+                appended to the end of it.</li>
+            <code>exiftool -all= image.jpg</code>
+            <li>Use the -EXIF option to remove Exif data only from a file.</li>
+            <code>exiftool -EXIF= image.jpg</code>
+            <li>Use the -overwrite_original option to remove all metadata without saving backup files.</li>
+            <code>exiftool -overwrite_original -all= image.jpg</code>
+            <li>Use the -recurse option to instruct ExifTool to traverse sub-directories. Specify the name of the
+                directory and itll clear metadata for every image file found inside.</li>
+            <code>exiftool -recurse -all= images-folder</code>
+            <li>Use a wildcard and the following options to clear all metadata for all images and those found inside
+                subdirectories. If youre wary of using it, omit the -overwrite_original option.</li>
+            <code>exiftool -overwrite_original -recurse -all= *</code>
+            <li>To see all other options for ExifTool, check out its man page.</li>
+            <code>man exiftool</code>
+        </ol>
+        </ol>
+
+    </div>
+
+</body>
+
+</html>
