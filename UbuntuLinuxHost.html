@@ -1,186 +1,214 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <title>Encrypted Ubuntu Linux Host</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">
-      <div class="page-header ">
+      <div class="page-header">
         <h1>Encrypted Ubuntu Linux Host</h1>
-        <p>We have chosen Ubuntu 21.10 as our host operating system for all of
-          our Tutorials - the reason being is that its
-          the most widely supported Li nux OS that has drivers and firmware
-          support for most devices. Other Linux Flavors are
-          available but for the normal new Li nux user who wishes to not use
-          Windows - This is by far the best way to go.
+        <p>
+          We have chosen Ubuntu 21.10 as our host operating system for all of
+          our Tutorials - the reason being is that its the most widely supported
+          Li nux OS that has drivers and firmware support for most devices.
+          Other Linux Flavors are available but for the normal new Li nux user
+          who wishes to not use Windows - This is by far the best way to go.
           There is nothing worse than installi ng a new Operating System only to
-          find some of your devices do not work.</p>
-        <p>For this Tutorial and for best NETSEC and OPSEC Practice. We are
-          going to run the Host install from an External
-          Encrypted Drive (SD / NvMe) are preferred as at any stage we can rip
-          out the SD / NvMe and snap it in half or hit it
-          with a hammer.</p>
-        <p>What we will need for this tutorial is a Computer and 2 External
-          Drives as noted above.</p>
+          find some of your devices do not work.
+        </p>
+        <p>
+          For this Tutorial and for best NETSEC and OPSEC Practice. We are going
+          to run the Host install from an External Encrypted Drive (SD / NvMe)
+          are preferred as at any stage we can rip out the SD / NvMe and snap it
+          in half or hit it with a hammer.
+        </p>
+        <p>
+          What we will need for this tutorial is a Computer and 2 External
+          Drives as noted above.
+        </p>
       </div>
       <h2>Download The latest version of Ubuntu:</h2>
       <p>At the time of writing The latest version is 21.10</p>
-      <ol>
-        <li class="list-group-item">Open your web browser preferably using a
-          Proxy and navigate to: *** CLEARNET
-          https://ubuntu-mate.org/download/amd64/impish/ CLEARNET ***</li>
-        <li class="list-group-item">Choose the method youd li ke to use (Direct
-          Download or Torrent) - The preferred method
-          of download is using the
-          torrent option as it has a hash check which verifies the integrity of
-          the .iso</li>
-        <li class="list-group-item">Once the file is downloaded verify using the
-          instructions li sted here: *** CLEARNET
-          https://ubuntu-mate.org/faq/verify-download-quick/ CLEARNET ***</li>
-        <li class="list-group-item">Save the Image to your machine and write it
-          to your first External Drive.</li>
-        <li class="list-group-item">If using Windows youll need (Etcher)</li>
-        <li class="list-group-item">If using Li nux (usb-creator-gtk) which can
-          be installed with sudo apt install
-          usb-creator-gtk</li>
+      <ol class="list-group-item">
+        <li class="">
+          Open your web browser preferably using a Proxy and navigate to: ***
+          CLEARNET https://ubuntu-mate.org/download/amd64/impish/ CLEARNET ***
+        </li>
+        <li class="">
+          Choose the method youd li ke to use (Direct Download or Torrent) - The
+          preferred method of download is using the torrent option as it has a
+          hash check which verifies the integrity of the .iso
+        </li>
+        <li class="">
+          Once the file is downloaded verify using the instructions li sted
+          here: *** CLEARNET https://ubuntu-mate.org/faq/verify-download-quick/
+          CLEARNET ***
+        </li>
+        <li class="">
+          Save the Image to your machine and write it to your first External
+          Drive.
+        </li>
+        <li class="">If using Windows youll need (Etcher)</li>
+        <li class="">
+          If using Li nux (usb-creator-gtk) which can be installed with sudo apt
+          install usb-creator-gtk
+        </li>
       </ol>
-      <h2>Now that you have your installation media created its time to boot
-        from the drive:</h2>
+      <h2>
+        Now that you have your installation media created its time to boot from
+        the drive:
+      </h2>
       <h3>INSTALL UBUNTU:</h3>
-      <ol>
-        <li class="list-group-item">Reboot your machine and boot into the bios
-          and turn off secure boot. We want to do this
-          so that the install does
-          not enroll a key into your bios.</li>
-        <li class="list-group-item">Usually the bios can be accessed by pressing
-          the DEL / ESC / F2 Key</li>
-        <li class="list-group-item">Once that is done save and exit the Bios by
-          pressing the F10 key and save the changes.
+      <ol class="list-group-item">
+        <li class="">
+          Reboot your machine and boot into the bios and turn off secure boot.
+          We want to do this so that the install does not enroll a key into your
+          bios.
         </li>
-        <li class="list-group-item">As soon your machine reboots press the boot
-          menu key so we can boot from the SD card we
-          created. On most
-          machines its F12 / F11 / F8 - Consult your computer brand for how to
-          do this if none of them work.</li>
-        <li class="list-group-item">The Ubuntu boot menu will appear and you can
-          select the first option and you should boot
-          into li ve mode of the
-          OS</li>
-        <li class="list-group-item">Once booted you will have a the option to
-          Try Ubuntu Mate / Install and the Select your
-          preferred language menu
+        <li class="">
+          Usually the bios can be accessed by pressing the DEL / ESC / F2 Key
         </li>
-        <li class="list-group-item">Next you will be prompted to select your
-          keyboard Layout - Choose the layout that you
-          use and cli ck next</li>
-        <li class="list-group-item">Next on the Updates and Software Screen you
-          will have the option for Normal or Minimal
-          Installation. Select
-          Minimal</li>
-        <li class="list-group-item">Put a checkbox in both download updates and
-          Install Third Party Software</li>
-        <li class="list-group-item">If you have a Configure secure boot checkbox
-          then you know you have not disabled secure
-          boot in the bios (quit
-          the installation and reboot back into your bios in step 1)</li>
-        <li class="list-group-item">Next the installation type window will
-          appear</li>
-        <li class="list-group-item">Select Erase Disk and Install Ubuntu Mate
-          and cli ck the advanced Features Button</li>
-        <li class="list-group-item">A li ttle window will pop up / Select the
-          Encryption type you'd li ke to use - The
-          preferred method is ZFS</li>
-        <li class="list-group-item">Put a tick in the Encrypt the new Ubuntu
-          Mate Installation and cli ck OK and then
-          Continue</li>
-        <li class="list-group-item">You will now need to choose a password for
-          your encryption to unlock your drive at boot.
-          Enter a nice long
-          passphrase that you will remember and cli ck Install Now</li>
-        <li class="list-group-item">Now you will have the option to select the
-          disk you'd li ke to install onto. Select the
-          second external drive
-          that you had inserted at boot - MAKE SURE YOU SELECT THE CORRECT
-          DRIVE..</li>
-        <li class="list-group-item"> MAKE SURE YOU SELECT THE CORRECT DRIVE..
-          (yes!! check twice)</li>
-        <li class="list-group-item"> Click the install now - A window will pop
-          up detaili ng the changes that will be made
-          to your disk.. Click
-          Continue. </li>
-        <li class="list-group-item"> The next window will ask for your location
-          and then cli ck continue</li>
-        <li class="list-group-item">
+        <li class="">
+          Once that is done save and exit the Bios by pressing the F10 key and
+          save the changes.
+        </li>
+        <li class="">
+          As soon your machine reboots press the boot menu key so we can boot
+          from the SD card we created. On most machines its F12 / F11 / F8 -
+          Consult your computer brand for how to do this if none of them work.
+        </li>
+        <li class="">
+          The Ubuntu boot menu will appear and you can select the first option
+          and you should boot into li ve mode of the OS
+        </li>
+        <li class="">
+          Once booted you will have a the option to Try Ubuntu Mate / Install
+          and the Select your preferred language menu
+        </li>
+        <li class="">
+          Next you will be prompted to select your keyboard Layout - Choose the
+          layout that you use and cli ck next
+        </li>
+        <li class="">
+          Next on the Updates and Software Screen you will have the option for
+          Normal or Minimal Installation. Select Minimal
+        </li>
+        <li class="">
+          Put a checkbox in both download updates and Install Third Party
+          Software
+        </li>
+        <li class="">
+          If you have a Configure secure boot checkbox then you know you have
+          not disabled secure boot in the bios (quit the installation and reboot
+          back into your bios in step 1)
+        </li>
+        <li class="">Next the installation type window will appear</li>
+        <li class="">
+          Select Erase Disk and Install Ubuntu Mate and cli ck the advanced
+          Features Button
+        </li>
+        <li class="">
+          A li ttle window will pop up / Select the Encryption type you'd li ke
+          to use - The preferred method is ZFS
+        </li>
+        <li class="">
+          Put a tick in the Encrypt the new Ubuntu Mate Installation and cli ck
+          OK and then Continue
+        </li>
+        <li class="">
+          You will now need to choose a password for your encryption to unlock
+          your drive at boot. Enter a nice long passphrase that you will
+          remember and cli ck Install Now
+        </li>
+        <li class="">
+          Now you will have the option to select the disk you'd li ke to install
+          onto. Select the second external drive that you had inserted at boot -
+          MAKE SURE YOU SELECT THE CORRECT DRIVE..
+        </li>
+        <li class="">
+          MAKE SURE YOU SELECT THE CORRECT DRIVE.. (yes!! check twice)
+        </li>
+        <li class="">
+          Click the install now - A window will pop up detaili ng the changes
+          that will be made to your disk.. Click Continue.
+        </li>
+        <li class="">
+          The next window will ask for your location and then cli ck continue
+        </li>
+        <li class="">
           On the Who are you Screen input your details. Obviously don't use your
-          real name here. and ensure you select
-          Require Password to Login.
-
+          real name here. and ensure you select Require Password to Login.
         </li>
-        <li class="list-group-item">
+        <li class="">
           Press Continue and then sit back and relax while the installation
           finishes.
         </li>
-        <li class="list-group-item">
+        <li class="">
           Once the installation has completed you will need to reboot your
-          machine. Press the restart button and remove your
-          installation media.
+          machine. Press the restart button and remove your installation media.
         </li>
       </ol>
-      <h3> BOOTING FOR THE FIRST TIME:</h3>
-      <ol>
-        <li class="list-group-item"> Once the machine reboots press the F12 /
-          F11 / F8 boot menu key and select your second
-          external USB card.</li>
-        <li class="list-group-item"> You will be prompted with a Decrypt Disk
-          Passphrase prompt. Input the password you used
-          in step 15 above and
-          press enter.</li>
-        <li class="list-group-item">
+      <h3>BOOTING FOR THE FIRST TIME:</h3>
+      <ol class="list-group-item">
+        <li class="">
+          Once the machine reboots press the F12 / F11 / F8 boot menu key and
+          select your second external USB card.
+        </li>
+        <li class="">
+          You will be prompted with a Decrypt Disk Passphrase prompt. Input the
+          password you used in step 15 above and press enter.
+        </li>
+        <li class="">
           Your machine will boot and you will be presented with the login
-          Screen.</li>
-        <li class="list-group-item">
+          Screen.
+        </li>
+        <li class="">
           Login and you will then be presented with the desktop which will be
           your base for the remaining Li nux tutorials.
         </li>
       </ol>
       <p>
-        Famili arize yourself with the layout etc.
-        You can navigate to the top left menu and go down to the Control Center
-        where you can make changes to your settings
-        and install additional drivers.
-        <p>
-          <p>
-            For the most part of using Li nux we are going to be using the
-            command li ne a lot so a good idea is to add the
-            Terminal Launcher to your top bar.
-          </p>
+        Famili arize yourself with the layout etc. You can navigate to the top
+        left menu and go down to the Control Center where you can make changes
+        to your settings and install additional drivers.
+      </p>
 
-          <h3>To do this:</h3>
-          <ol>
-            <li class="list-group-item"> Cli ck on the Menu and select System
-              Tools. You will see MATE terminal li sted. </li>
-            <li class="list-group-item"> Select it and drag it to your top bar.</li>
-          </ol>
-          <p>Once on the top bar. Cli ck it and type:
-          </p>
-          <ol>
-            <li class="list-group-item">sudo apt update </li>
+      <p></p>
+      <p>
+        For the most part of using Li nux we are going to be using the command
+        li ne a lot so a good idea is to add the Terminal Launcher to your top
+        bar.
+      </p>
 
-            <li class="list-group-item">sudo apt-dist upgrade -y</li>
-            <li class="list-group-item">sudo reboot -n</li>
-          </ol>
-          <p>
-            Your machine will reboot and you will have a fresh clean O/S updated
-            and ready to use.
-          </p>
-        </div>
-      </body>
+      <h3>To do this:</h3>
+      <ol class="list-group-item">
+        <li class="">
+          Cli ck on the Menu and select System Tools. You will see MATE terminal
+          li sted.
+        </li>
+        <li class="">Select it and drag it to your top bar.</li>
+      </ol>
+      <p>Once on the top bar. Cli ck it and type:</p>
+      <ol>
+        <li class="">sudo apt update</li>
 
-    </html>
+        <li class="">sudo apt-dist upgrade -y</li>
+        <li class="">sudo reboot -n</li>
+      </ol>
+      <p>
+        Your machine will reboot and you will have a fresh clean O/S updated and
+        ready to use.
+      </p>
+    </div>
+  </body>
+</html>
