@@ -52,7 +52,7 @@ ul {
    /* CSS for the navigation bar */
     .navbar {
       background-color: #333;
-      overflow: hidden;
+     /* overflow: hidden;*/
     }
 
     .navbar a {
