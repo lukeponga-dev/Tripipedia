@@ -49,3 +49,24 @@ ul {
 .container ul:last-child {
   margin-bottom: 0;
 }
+   /* CSS for the navigation bar */
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      color: #fff;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #555;
+    }
+
+    .navbar a.active {
+      background-color: #4CAF50;
+    }
